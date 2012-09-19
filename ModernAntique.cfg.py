@@ -17,7 +17,7 @@ labels = dict(\
     theme=r'themes/ModernAntique/modern-antique-labels.xml',
     image_type='png',
     buffer_size=128,
-    scale_factor=1.25,
+    scale_factor=1.15,
     force_reload=True,
     )
 
@@ -72,11 +72,18 @@ composer = dict(\
 ROOT = dict(\
     name='world',
     prototype='root',
-    metadata=dict(tag='world'),
-    pyramid=dict(levels=range(4, 10),
-                 format='png',
-                 buffer=64,
-                 tile_size=256,),
+    metadata=dict(
+        tag='world',
+        description='Modern Antique - Mimics a antique map',
+        attribution=''),
+    pyramid=dict(
+        levels=range(4, 10),
+        format='png',
+        buffer=64,
+        tile_size=256,
+        zoom=5,
+        center=(35,0),
+        ),
     cache=None,
     renderer=composer,
     )
