@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+
+<Style name="coastline" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#5c2f21" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#5c2f21" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="12" stroke="#5c2f21" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="coastline"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>coastline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/modern-antique-base/layers/coastline/7fbdd772-10m-coastline.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[coastline]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
