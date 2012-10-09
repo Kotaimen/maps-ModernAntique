@@ -7,7 +7,6 @@ shapes = dict(\
     image_type='png',
     buffer_size=0,
     scale_factor=1,
-    force_reload=True,
     )
 
 labels = dict(\
@@ -18,7 +17,6 @@ labels = dict(\
     image_type='png',
     buffer_size=128,
     scale_factor=1.15,
-    force_reload=True,
     )
 
 texture = dict(\
@@ -29,7 +27,6 @@ texture = dict(\
     image_type='png',
     buffer_size=0,
     scale_factor=1,
-    force_reload=True,
     )
 
 composer = dict(\
