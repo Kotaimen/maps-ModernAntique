@@ -1,6 +1,5 @@
 
 shapes = dict(\
-    name='mapnik_source',
     prototype='datasource.mapnik',
     cache=None,
     theme=r'themes/ModernAntique/modern-antique-shapes.xml',
@@ -10,7 +9,6 @@ shapes = dict(\
     )
 
 labels = dict(\
-    name='mapnik_source',
     prototype='datasource.mapnik',
     cache=None,
     theme=r'themes/ModernAntique/modern-antique-labels.xml',
@@ -20,7 +18,6 @@ labels = dict(\
     )
 
 texture = dict(\
-    name='mapnik_source',
     prototype='datasource.mapnik',
     cache=None,
     theme=r'themes/ModernAntique/modern-antique-texture.xml',
@@ -30,10 +27,9 @@ texture = dict(\
     )
 
 composer = dict(\
-     name='imagemagick_composer',
      prototype='composite.imagemagick',
      cache=None,
-     sources=[shapes, texture, labels],
+     sources=['shapes', 'texture', 'labels'],
      command=''' 
      # Land/Water
      ( $1 -paint 1 ) 
@@ -67,8 +63,8 @@ composer = dict(\
      )
 
 ROOT = dict(\
-    name='world',
     prototype='root',
+    renderer='composer',
     metadata=dict(
         tag='world',
         description='Modern Antique - Mimics a antique map',
@@ -82,6 +78,5 @@ ROOT = dict(\
         center=(35,0),
         ),
     cache=None,
-    renderer=composer,
     )
 
