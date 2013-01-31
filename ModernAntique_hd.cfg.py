@@ -1,6 +1,6 @@
 import os
 
-tag = 'ModernAntique'
+tag = 'ModernAntiqueHD'
 
 datadir = '/Users/Kotaimen/proj/geodata'
 themedir= './themes/ModernAntique'
@@ -10,7 +10,7 @@ exportdir = os.path.join(themedir, 'cache', 'export')
 zfactor=5
 azimuth=315
 
-tile_size = 256
+tile_size = 512
 fmt = 'jpg'
 
 elevation = dict(\
@@ -117,14 +117,14 @@ composer = dict(\
 
     # Eroded text
     ( 
-       $3 -paint 1 -channel A -morphology Erode Disk:1 +channel -modulate 86,110
+       $3 -paint 2 -channel A -morphology Erode Disk:2 +channel -modulate 86,110
     ) -compose Over -composite
     ( 
-       $3 -channel A -morphology Erode Disk:3 +channel 
+       $3 -channel A -morphology Erode Disk:8 +channel 
     ) -compose Over -composite
 
-     -unsharp 0x0.4
-     -attenuate 0.3 +noise Gaussian
+#     -unsharp 0x0.4
+     -attenuate 0.5 +noise Gaussian
      -brightness-contrast +3%x-1%
      -modulate 100,90,98	
      -quality 90
