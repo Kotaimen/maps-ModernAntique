@@ -3,7 +3,7 @@ Modern Antique
 
 Mason Map Theme: Modern Antique
 
-(Take two for 0.9 release)
+(Take three for 0.95 release)
 
 Sample Map:
 
@@ -11,4 +11,5 @@ Sample Map:
 
 Or here at MapBox:
 
-http://tiles.mapbox.com/kotaimen/map/ModernAntique
+https://a.tiles.mapbox.com/v3/kotaimen.g37919k9/page.html?secure=0#4/5.97/16.44
+

@@ -1,0 +1,434 @@
+{
+  "bounds": [
+    -180,
+    -85,
+    180,
+    85
+  ],
+  "center": [
+    -92.8125,
+    15.9613,
+    5
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 2,
+  "maxzoom": 8,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "base.mss",
+    "line.mss",
+    "label.mss",
+    "texture.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "boundingbox",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-900913-bounding-box.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "boundingbox"
+    },
+    {
+      "geometry": "polygon",
+      "id": "bathymetry",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-bathymetry.zip",
+        "id": "bathymetry",
+        "project": "modern-antique-base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "bathymetry",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "polygon",
+      "id": "land",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-land.zip",
+        "id": "land",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "land",
+      "extent": [
+        -179.99998938710382,
+        -85.051,
+        180,
+        83.63410065282294
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "polygon",
+      "id": "islands",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_minor_islands.shp",
+        "id": "islands",
+        "project": "modern-antique-base",
+        "srs": null
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "islands",
+      "extent": [
+        -179.9576309889999,
+        -76.12184010199991,
+        179.50464928500003,
+        81.34483470300006
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "coastline",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_coastline.shp",
+        "id": "coastline",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "coastline",
+      "extent": [
+        -179.99999999999991,
+        -85.051,
+        180,
+        83.63410065300008
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.0602066219999,
+        -49.25087001999992,
+        178.448622268,
+        81.12853131600008
+      ],
+      "id": "10m_admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_cultural/ne_10m_admin_1_states_provinces_lines_shp.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10m_admin1"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -180,
+        -58.37588254937078,
+        178.74932072512505,
+        82.21688470654527
+      ],
+      "id": "10m_marine_indicator",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_cultural/ne_10m_admin_0_boundary_lines_maritime_indicator.shp",
+        "id": "10m_marine_indicator",
+        "project": "Brick_imposm3",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10m_marine_indicator"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -89.19313967135845,
+        -23.83757903399993,
+        149.3593353700001,
+        48.12060394300009
+      ],
+      "id": "10m_disurpted",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_cultural/ne_10m_admin_0_boundary_lines_disputed_areas.shp",
+        "id": "10m_disurpted",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10m_disurpted"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -141.00554863899987,
+        -55.120923766999944,
+        140.97762699400005,
+        70.07531036400012
+      ],
+      "id": "10m_admin0",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_cultural/ne_10m_admin_0_boundary_lines_land.shp",
+        "id": "10m_admin0",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10m_admin0"
+    },
+    {
+      "geometry": "linestring",
+      "id": "rivers",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_rivers_lake_centerlines.shp",
+        "id": "rivers",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "rivers",
+      "extent": [
+        -164.90347246002037,
+        -52.157728773964294,
+        177.21119225352123,
+        75.79348379113986
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "polygon",
+      "id": "lakes",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_lakes.shp",
+        "id": "lakes",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "lakes",
+      "extent": [
+        -165.96558168829336,
+        -50.66966651748362,
+        176.09377623426627,
+        81.95520786930868
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "geographic_lines",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-geographic-lines.zip",
+        "id": "geographic_lines",
+        "project": "modern-antique-base",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "geographic_lines"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -102.90068436639604,
+        -78.60693899999998,
+        178.0308332721056,
+        79.04721407579228
+      ],
+      "id": "label_admin0",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Stage/Brick/places/admin-0-labels-z6.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "label_admin0"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        83.63410065300015
+      ],
+      "id": "10m_country",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_cultural/ne_10m_admin_0_countries.shp",
+        "id": "10m_country",
+        "project": "Brick_imposm3",
+        "srs": "",
+        "encoding": "windows1252"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "windows1252"
+      },
+      "name": "10m_country"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -156.24532937499998,
+        20.249832999999974,
+        -54.77481032998548,
+        71.1110301058789
+      ],
+      "id": "label_admin1",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Stage/Brick/places/admin-1-labels-z7.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "label_admin1"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -176.53333,
+        -54.8,
+        178.00417,
+        71.68722
+      ],
+      "id": "place_static",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Stage/Brick/places/place-points.shp",
+        "id": "placepoints",
+        "project": "Brick_imposm3",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "place_static"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -99.6754881921606,
+        -81.78992209909535,
+        134.1784941447303,
+        49.32165488322707
+      ],
+      "id": "label_continent",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Stage/Brick/places/continents.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "label_continent",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -165.96558168829336,
+        -50.66966651748362,
+        176.09377623426627,
+        81.95520786930868
+      ],
+      "id": "lake_labels",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_lakes.shp",
+        "id": "lake_labels",
+        "project": "Antique",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "lake_labels"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        179.9998970889459,
+        85.051
+      ],
+      "id": "ne10mocean",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/Kotaimen/proj/geodata/Vanilla/NaturalEarth2/10m_physical/ne_10m_geography_marine_polys.shp",
+        "id": "ne10mocean",
+        "project": "Antique",
+        "srs": "",
+        "encoding": "windows1252"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "windows1252"
+      },
+      "name": "ne10mocean"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -180,
+        -60,
+        180,
+        46
+      ],
+      "id": "monsters",
+      "class": "",
+      "Datasource": {
+        "file": "monsters.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "monsters"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "mapbox.mapbox-streets",
+  "name": "Antique",
+  "description": "",
+  "attribution": ""
+}

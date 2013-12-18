@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" buffer-size="256" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85,180,85</Parameter>
+  <Parameter name="center">-92.8125,15.9613,5</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">2</Parameter>
+  <Parameter name="maxzoom">8</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="_basemap"><![CDATA[mapbox.mapbox-streets]]></Parameter>
+  <Parameter name="id"><![CDATA[Antique]]></Parameter>
+  <Parameter name="_updated">1387186381000</Parameter>
+  <Parameter name="name"><![CDATA[Antique]]></Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+
+<Style name="boundingbox" filter-mode="first">
+  <Rule>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+</Style>
+<Layer name="boundingbox"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>boundingbox</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/boundingbox/8cd8d237-10m-900913-bounding-box.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="bathymetry" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.1" fill="#77340a" comp-op="multiply" />
+  </Rule>
+</Style>
+<Layer name="bathymetry"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bathymetry</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/bathymetry/c22966e3-10m-bathymetry.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[bathymetry]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="land-texture" filter-mode="first" comp-op="hard-light">
+  <Rule>
+    <Filter>([ScaleRank] &gt; 1)</Filter>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+  <Rule>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+</Style>
+<Style name="land-fill" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <PolygonSymbolizer gamma="0.6" fill-opacity="1" fill="#b89f5f" />
+    <LineSymbolizer stroke="#b89f5f" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <PolygonSymbolizer fill-opacity="1" fill="#b89f5f" />
+    <LineSymbolizer stroke="#b89f5f" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([ScaleRank] &gt; 1)</Filter>
+    <PolygonSymbolizer fill-opacity="1" fill="#b89f5f" />
+  </Rule>
+</Style>
+<Style name="land-outline" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 1)</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &gt; 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &gt; 1)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="land-outline3" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#5c2f21" stroke-opacity="0.75" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#5c2f21" stroke-opacity="0.75" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#5c2f21" stroke-opacity="0.75" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Style name="land-outline4" filter-mode="first" image-filters="agg-stack-blur(16, 16),agg-stack-blur(9, 9),agg-stack-blur(24, 24)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.8" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.6" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([ScaleRank] &lt;= 1)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="1" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Layer name="land"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>land-outline4</StyleName>
+    <StyleName>land-outline3</StyleName>
+    <StyleName>land-outline</StyleName>
+    <StyleName>land-fill</StyleName>
+    <StyleName>land-texture</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/land/3d2a6643-10m-land.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[land]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="islands-texture" filter-mode="first" comp-op="hard-light">
+  <Rule>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+</Style>
+<Style name="islands-fill" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="1" fill="#b89f5f" />
+  </Rule>
+</Style>
+<Style name="islands-outline" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="#2f1111" stroke-linejoin="round" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="islands"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>islands-outline</StyleName>
+    <StyleName>islands-fill</StyleName>
+    <StyleName>islands-texture</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/islands/ne_10m_minor_islands.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[islands]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="coastline-outline2" filter-mode="first" image-filters="agg-stack-blur(6, 6),agg-stack-blur(4, 4),agg-stack-blur(8, 8)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.2" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Style name="coastline-outline4" filter-mode="first" image-filters="agg-stack-blur(24, 24),agg-stack-blur(16, 16),agg-stack-blur(32, 32)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.8" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.6" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="1" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Layer name="coastline"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>coastline-outline4</StyleName>
+    <StyleName>coastline-outline2</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/coastline/ne_10m_coastline.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[coastline]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="10m_admin1-body" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 7)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 7)</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="2.5" stroke-dasharray="6, 4" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+</Style>
+<Style name="10m_admin1-outline2" filter-mode="first" image-filters="agg-stack-blur(6, 6),agg-stack-blur(6, 6),agg-stack-blur(6, 6),agg-stack-blur(4, 4),agg-stack-blur(8, 8),agg-stack-blur(8, 8)" comp-op="hard-light" opacity="0.5">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.2" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 2)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.2" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 4)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 5)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 7)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 7)</Filter>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Layer name="10m_admin1"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>10m_admin1-outline2</StyleName>
+    <StyleName>10m_admin1-body</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_admin1/ne_10m_admin_1_states_provinces_lines_shp.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_marine_indicator"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_marine_indicator/ne_10m_admin_0_boundary_lines_maritime_indicator.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_marine_indicator]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="10m_disurpted-inline" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="2, 4" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="8, 8" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 6" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="5, 5" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 4" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="3, 2" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="10, 3" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="8, 3" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 2" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="5, 2" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 1" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" stroke-width="0" clip="false" />
+  </Rule>
+</Style>
+<Style name="10m_disurpted-outline2" filter-mode="first" image-filters="agg-stack-blur(6, 6),agg-stack-blur(4, 4),agg-stack-blur(8, 8)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.2" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Style name="10m_disurpted-outline4" filter-mode="first" image-filters="agg-stack-blur(24, 24),agg-stack-blur(16, 16),agg-stack-blur(32, 32)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.8" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.6" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="11" stroke-opacity="1" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Layer name="10m_disurpted"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>10m_disurpted-outline4</StyleName>
+    <StyleName>10m_disurpted-outline2</StyleName>
+    <StyleName>10m_disurpted-inline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_disurpted/ne_10m_admin_0_boundary_lines_disputed_areas.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_disurpted]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="10m_admin0-inline" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="2, 4" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Claim boundary')</Filter>
+    <LineSymbolizer stroke-dasharray="1, 3" stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="8, 8" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 6" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="5, 5" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 4" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-dasharray="3, 2" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Breakaway')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="10, 3" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="8, 3" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 2" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="5, 2" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 1" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Disputed (please verify)')</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="3" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="2" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke-width="1" stroke="#5c1500" stroke-linejoin="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([featurecla] = 'Indefinite (please verify)')</Filter>
+    <LineSymbolizer stroke-dasharray="6, 1" stroke-linecap="butt" stroke="#5c1500" stroke-linejoin="round" stroke-width="0" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2.5" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1.5" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#5c1500" stroke-linejoin="round" stroke-linecap="round" stroke-width="0" clip="false" />
+  </Rule>
+</Style>
+<Style name="10m_admin0-outline2" filter-mode="first" image-filters="agg-stack-blur(6, 6),agg-stack-blur(4, 4),agg-stack-blur(8, 8)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.4" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.2" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="11" stroke-opacity="0.5" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Style name="10m_admin0-outline4" filter-mode="first" image-filters="agg-stack-blur(24, 24),agg-stack-blur(16, 16),agg-stack-blur(32, 32)" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="9" stroke-opacity="0.8" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="7" stroke-opacity="0.6" stroke="#5c2f21" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="11" stroke-opacity="1" stroke="#5c2f21" />
+  </Rule>
+</Style>
+<Layer name="10m_admin0"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>10m_admin0-outline4</StyleName>
+    <StyleName>10m_admin0-outline2</StyleName>
+    <StyleName>10m_admin0-inline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_admin0/ne_10m_admin_0_boundary_lines_land.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_admin0]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="rivers" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="1.75" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="1" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="1.75" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt; 8)</Filter>
+    <LineSymbolizer stroke-width="1.75" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt; 8)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt; 8)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt; 11)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt; 11)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+</Style>
+<Layer name="rivers"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>rivers</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/rivers/ne_10m_rivers_lake_centerlines.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[rivers]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lakes-shadow" filter-mode="first" image-filters="agg-stack-blur(16, 16)" comp-op="color-burn" opacity="0.2">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="5" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="7" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt; 10)</Filter>
+    <LineSymbolizer stroke-width="9" stroke-linejoin="round" stroke="#113d1d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt; 10)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+  </Rule>
+</Style>
+<Style name="lakes-body" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 3)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([scalerank] &lt;= 6)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+    <PolygonSymbolizer fill="#6e7044" fill-opacity="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <Filter>([scalerank] &lt; 10)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#113d1d" />
+    <PolygonSymbolizer fill-opacity="1" fill="#6e7044" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([scalerank] &lt; 10)</Filter>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+    <PolygonSymbolizer fill="#6e7044" fill-opacity="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <LineSymbolizer stroke-linejoin="round" stroke="#113d1d" stroke-width="0" />
+    <PolygonSymbolizer fill="#6e7044" fill-opacity="0" />
+  </Rule>
+</Style>
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>lakes-body</StyleName>
+    <StyleName>lakes-shadow</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lakes/ne_10m_lakes.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[lakes]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geographic_lines" filter-mode="first" comp-op="color-burn">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="5" stroke-dasharray="1, 9" stroke="#5c1500" stroke-opacity="0.8" stroke-linecap="round" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="3" stroke-dasharray="1, 6" stroke="#5c1500" stroke-opacity="0.8" stroke-linecap="round" clip="false" />
+  </Rule>
+</Style>
+<Layer name="geographic_lines"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>geographic_lines</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/geographic_lines/0d81b6b2-10m-geographic-lines.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[geographic_lines]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_admin0"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_admin0/admin-0-labels-z6.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_country"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_country/ne_10m_admin_0_countries.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_country]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="encoding"><![CDATA[windows1252]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_admin1"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_admin1/admin-1-labels-z7.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="place_static"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/place_static/place-points.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[placepoints]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_continent"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_continent/continents.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="lake_labels"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lake_labels/ne_10m_lakes.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[lake_labels]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="ne10mocean"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/ne10mocean/ne_10m_geography_marine_polys.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[ne10mocean]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="encoding"><![CDATA[windows1252]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="monsters"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/monsters.csv]]></Parameter>
+       <Parameter name="type"><![CDATA[csv]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

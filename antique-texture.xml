@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" buffer-size="256" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85,180,85</Parameter>
+  <Parameter name="center">-92.8125,15.9613,5</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">2</Parameter>
+  <Parameter name="maxzoom">8</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="_basemap"><![CDATA[mapbox.mapbox-streets]]></Parameter>
+  <Parameter name="id"><![CDATA[Antique]]></Parameter>
+  <Parameter name="_updated">1387186440000</Parameter>
+  <Parameter name="name"><![CDATA[Antique]]></Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+
+<Layer name="boundingbox"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/boundingbox/8cd8d237-10m-900913-bounding-box.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="bathymetry"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/bathymetry/c22966e3-10m-bathymetry.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[bathymetry]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="land"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/land/3d2a6643-10m-land.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[land]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="islands"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/islands/ne_10m_minor_islands.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[islands]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="coastline"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/coastline/ne_10m_coastline.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[coastline]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_admin1"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_admin1/ne_10m_admin_1_states_provinces_lines_shp.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_marine_indicator"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_marine_indicator/ne_10m_admin_0_boundary_lines_maritime_indicator.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_marine_indicator]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_disurpted"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_disurpted/ne_10m_admin_0_boundary_lines_disputed_areas.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_disurpted]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_admin0"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_admin0/ne_10m_admin_0_boundary_lines_land.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_admin0]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="rivers"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/rivers/ne_10m_rivers_lake_centerlines.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[rivers]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lakes/ne_10m_lakes.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[lakes]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="geographic_lines"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/geographic_lines/0d81b6b2-10m-geographic-lines.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[geographic_lines]]></Parameter>
+       <Parameter name="project"><![CDATA[modern-antique-base]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_admin0"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_admin0/admin-0-labels-z6.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="10m_country"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/10m_country/ne_10m_admin_0_countries.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[10m_country]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="encoding"><![CDATA[windows1252]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_admin1"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_admin1/admin-1-labels-z7.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="place_static"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/place_static/place-points.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[placepoints]]></Parameter>
+       <Parameter name="project"><![CDATA[Brick_imposm3]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="label_continent"
+  status="off"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/label_continent/continents.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="lake_labels"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lake_labels/ne_10m_lakes.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[lake_labels]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="ne10mocean"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/ne10mocean/ne_10m_geography_marine_polys.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[ne10mocean]]></Parameter>
+       <Parameter name="project"><![CDATA[Antique]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="encoding"><![CDATA[windows1252]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="monsters" filter-mode="first" image-filters="emboss" comp-op="hard-light" opacity="0.7">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 6)</Filter>
+    <PointSymbolizer file="markers/octopus.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 5)</Filter>
+    <PointSymbolizer file="markers/en_walrus.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 4)</Filter>
+    <PointSymbolizer file="markers/en_bwhale.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 3)</Filter>
+    <PointSymbolizer file="markers/en_geswdr.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 2)</Filter>
+    <PointSymbolizer file="markers/en_stshpwrk.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 1)</Filter>
+    <PointSymbolizer file="markers/en_stshpwrk.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <PointSymbolizer opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+</Style>
+<Layer name="monsters"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>monsters</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/monsters.csv]]></Parameter>
+       <Parameter name="type"><![CDATA[csv]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
