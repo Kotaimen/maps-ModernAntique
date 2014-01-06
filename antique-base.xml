@@ -12,7 +12,7 @@
   <Parameter name="metatile">2</Parameter>
   <Parameter name="_basemap"><![CDATA[mapbox.mapbox-streets]]></Parameter>
   <Parameter name="id"><![CDATA[Antique]]></Parameter>
-  <Parameter name="_updated">1387186381000</Parameter>
+  <Parameter name="_updated">1387365419000</Parameter>
   <Parameter name="name"><![CDATA[Antique]]></Parameter>
   <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
   <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
@@ -33,7 +33,7 @@
     </Datasource>
   </Layer>
 
-<Style name="bathymetry" filter-mode="first">
+<Style name="bathymetry" filter-mode="first" image-filters="agg-stack-blur(4, 4)">
   <Rule>
     <PolygonSymbolizer fill-opacity="0.1" fill="#77340a" comp-op="multiply" />
   </Rule>
@@ -265,7 +265,7 @@
     </Datasource>
   </Layer>
 
-<Style name="10m_admin1-body" filter-mode="first">
+<Style name="10m_admin1-body" filter-mode="first" comp-op="color-burn">
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
@@ -1098,6 +1098,12 @@
     </Datasource>
   </Layer>
 
+<Style name="lakes-texture" filter-mode="first" comp-op="soft-light">
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+</Style>
 <Style name="lakes-shadow" filter-mode="first" image-filters="agg-stack-blur(16, 16)" comp-op="color-burn" opacity="0.2">
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
@@ -1213,6 +1219,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>lakes-body</StyleName>
     <StyleName>lakes-shadow</StyleName>
+    <StyleName>lakes-texture</StyleName>
     <Datasource>
        <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lakes/ne_10m_lakes.shp]]></Parameter>
        <Parameter name="id"><![CDATA[lakes]]></Parameter>
@@ -1323,9 +1330,45 @@
     </Datasource>
   </Layer>
 
+<Style name="monsters" filter-mode="first" comp-op="hard-light" opacity="0.7">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 6)</Filter>
+    <PointSymbolizer file="markers/octopus.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 5)</Filter>
+    <PointSymbolizer file="markers/en_walrus.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 4)</Filter>
+    <PointSymbolizer file="markers/en_bwhale.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 3)</Filter>
+    <PointSymbolizer file="markers/en_geswdr.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 2)</Filter>
+    <PointSymbolizer file="markers/en_stshpwrk.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <Filter>([ID] = 1)</Filter>
+    <PointSymbolizer file="markers/en_stshpwrk.png" opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <PointSymbolizer opacity="1" allow-overlap="false" ignore-placement="true" />
+  </Rule>
+</Style>
 <Layer name="monsters"
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-    
+    <StyleName>monsters</StyleName>
     <Datasource>
        <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/monsters.csv]]></Parameter>
        <Parameter name="type"><![CDATA[csv]]></Parameter>

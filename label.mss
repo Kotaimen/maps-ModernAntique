@@ -1,4 +1,4 @@
-
+/*
 #label_admin0[zoom>=3][zoom<=8] {
   ::text {
     text-face-name: @land-text-bold;
@@ -31,7 +31,7 @@
   text-name:"[name]";
   text-face-name: @land-text-bold;
   text-placement: interior;
-  text-transform: uppercase;
+  text-transform: uppercase;  
   text-fill: @land-text-face-color;
   text-label-position-tolerance: 16;
   text-wrap-width: 100;
@@ -48,25 +48,25 @@
   [layer=6][zoom=6],
   [layer=6][zoom=7],
   [layer=7][zoom=8],
-  [layer=8][zoom=9], {
-
+  [layer=8][zoom=9], {  
+    
     shield-file: url("markers/circle2.png");
     shield-unlock-image: true;
     shield-face-name: @land-text-regular;
     shield-fill: @land-text-face-color;
-
+    
  //   shield-text-transform: uppercase;
 
     [font_size>=24] {
-      shield-size: 20;
-      shield-text-dx: 5;
+      shield-size: 20; 
+      shield-text-dx: 5; 
       shield-text-dy: 5;
       shield-transform: 'scale(0.8)';
     }
     [font_size<24] {
-      shield-size: 16;
-      shield-text-dx: 4;
-      shield-text-dy: 4;
+      shield-size: 16; 
+      shield-text-dx: 4; 
+      shield-text-dy: 4; 
       shield-transform: 'scale(0.7)';
     }
     shield-name: '[name]';
@@ -86,7 +86,7 @@
     [zoom>=6][zoom<9][scalerank<4],
     [zoom>=9][scalerank<8], {
   text-face-name: @aqua-text-regular;
-  text-name: '[name]';
+  text-name: '[name]';  
   [scalerank<2] { text-size: 14; }
   [scalerank>=2] { text-size: 12; }
   text-placement: interior;
@@ -94,10 +94,10 @@
   text-wrap-width: 60;
   }
 }
-
+  
 
 #lake_labels[zoom>=6] {
-
+  
   ::text
     [zoom=6][scalerank<=2],
     [zoom=7][scalerank<=3],
@@ -112,3 +112,4 @@
     text-wrap-width: 30;
   }
 }
+*/

@@ -12,7 +12,7 @@
   <Parameter name="metatile">2</Parameter>
   <Parameter name="_basemap"><![CDATA[mapbox.mapbox-streets]]></Parameter>
   <Parameter name="id"><![CDATA[Antique]]></Parameter>
-  <Parameter name="_updated">1387186569000</Parameter>
+  <Parameter name="_updated">1387348807000</Parameter>
   <Parameter name="name"><![CDATA[Antique]]></Parameter>
   <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
   <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
@@ -33,7 +33,7 @@
     </Datasource>
   </Layer>
 
-<Style name="bathymetry" filter-mode="first">
+<Style name="bathymetry" filter-mode="first" image-filters="agg-stack-blur(4, 4)">
   <Rule>
     <PolygonSymbolizer fill-opacity="0.1" fill="#77340a" comp-op="multiply" />
   </Rule>
@@ -66,28 +66,8 @@
     <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
   </Rule>
 </Style>
-<Style name="land-outline4" filter-mode="first" image-filters="agg-stack-blur(16, 16),agg-stack-blur(9, 9),agg-stack-blur(24, 24)" comp-op="hard-light">
-  <Rule>
-    <MaxScaleDenominator>25000000</MaxScaleDenominator>
-    <MinScaleDenominator>6500000</MinScaleDenominator>
-    <Filter>([ScaleRank] &lt;= 1)</Filter>
-    <LineSymbolizer stroke-width="9" stroke-opacity="0.8" stroke="#5c2f21" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000000</MaxScaleDenominator>
-    <MinScaleDenominator>25000000</MinScaleDenominator>
-    <Filter>([ScaleRank] &lt;= 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-opacity="0.6" stroke="#5c2f21" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>6500000</MaxScaleDenominator>
-    <Filter>([ScaleRank] &lt;= 1)</Filter>
-    <LineSymbolizer stroke-width="11" stroke-opacity="1" stroke="#5c2f21" />
-  </Rule>
-</Style>
 <Layer name="land"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>land-outline4</StyleName>
     <StyleName>land-texture</StyleName>
     <StyleName>land-fill</StyleName>
     <Datasource>
@@ -411,6 +391,12 @@
     </Datasource>
   </Layer>
 
+<Style name="lakes-texture" filter-mode="first" comp-op="soft-light">
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <PolygonPatternSymbolizer file="textures/antique_paper.jpg" alignment="local" clip="false" />
+  </Rule>
+</Style>
 <Style name="lakes-shadow" filter-mode="first" image-filters="agg-stack-blur(16, 16)" comp-op="color-burn" opacity="0.2">
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
@@ -526,6 +512,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>lakes-body</StyleName>
     <StyleName>lakes-shadow</StyleName>
+    <StyleName>lakes-texture</StyleName>
     <Datasource>
        <Parameter name="file"><![CDATA[/Users/Kotaimen/Documents/MapBox/project/Antique/layers/lakes/ne_10m_lakes.shp]]></Parameter>
        <Parameter name="id"><![CDATA[lakes]]></Parameter>

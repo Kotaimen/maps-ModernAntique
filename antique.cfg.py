@@ -15,16 +15,15 @@ base = dict(\
     theme=os.path.join(themedir, 'antique-base.xml'),
     image_type='png',
     buffer_size=0,
-    scale_factor=1
+    scale_factor=2
     )
-
 
 label = dict(\
     prototype='node.mapnik',
     theme=os.path.join(themedir, 'antique-label.xml'),
     image_type='png',
     buffer_size=tile_size*2,
-    scale_factor=1
+    scale_factor=2
     )
     
 halo = dict(\
@@ -32,7 +31,7 @@ halo = dict(\
     theme=os.path.join(themedir, 'antique-halo.xml'),
     image_type='png',
     buffer_size=0,
-    scale_factor=1
+    scale_factor=2
     )
     
 texture = dict(\
@@ -40,7 +39,7 @@ texture = dict(\
     theme=os.path.join(themedir, 'antique-texture.xml'),
     image_type='png',
     buffer_size=256,
-    scale_factor=1
+    scale_factor=2
     )
     
 composer=dict(\
@@ -49,40 +48,45 @@ composer=dict(\
     sources=['base', 'label', 'halo', 'texture',
              ],
     format=fmt,
-    command='''
-    {{base}}
+    command='''    
+    # Base shape with texture, saturation is reduced
+    {{base}} -modulate 100,66 
     {{texture}} -compose ColorBurn -composite
-    ( 
-        {{halo}}
-        ( {{label}} -channel A -morphology EdgeOut Disk:2  +channel ) -compose DstIn -composite
-    ) -compose Over -composite
+    
+    # Recuce smart haloing lightness a bit and blend with lighten, this cause
+    # only dark areas got the haloing effect, calculate haloing using morphology operation
+    (         
+         {{halo}} -modulate 90,66
+         ( {{label}} -channel A -morphology EdgeOut Disk:4 -blur 1  +channel  ) 
+         -compose DstIn -composite
+    ) -compose Lighten -composite
+    
+    # Render label as normal
     (    
         {{label}}  
         ( +clone -paint 1 -brightness-contrast 15
-#        -channel A
-#          -morphology HMT LineJunctions
-#          -morphology Dilate Disk:1
-#          +channel
         ) -compose Multiply -composite
     )  -compose Over -composite
-    -quality 90
-    ''' 
-    
+    -quality 80
+    '''     
     )
 
 ROOT = dict(\
     renderer='composer',
     metadata=dict(tag=tag,
+                  dispname='Antique',
                   version='3.0',
-                  description='Modern Antique',
-                  attribution='Natural Earth',
+                  description='Mimics a antique map',
+                  attribution='Natural Earth II',
                   ),
-    storage=dict(prototype='filesystem',
-                 root=os.path.join('/tmp/Antique'),
-                ),
+    storage=dict(prototype='cluster',
+               stride=16,
+               servers=['localhost:11211',],
+               root=os.path.join(cachedir, 'export', '%s' % tag),
+              ),
     pyramid=dict(levels=range(2, 8),
-                 zoom=4,
-                 center=(-122.4321, 37.7702),
+                 zoom=7,
+                 center=(47, -19),
                  format=fmt,
                  buffer=32,
                  tile_size=tile_size,
